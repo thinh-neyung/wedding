@@ -14,11 +14,11 @@ let navLinks = document.querySelectorAll('header nav a');
 window.onscroll = () => {
     sections.forEach(sec => {
         let top = window.scrollY;
-        let offset = sec.offsetTop - 100;
+        let offset = sec.offsetTop - 200;
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
 
-        if(top >= offset && top < offset + height) {
+        if (top >= offset && top < offset + height) {
             // active navbar links
             navLinks.forEach(links => {
                 links.classList.remove('active');
@@ -28,9 +28,9 @@ window.onscroll = () => {
             sec.classList.add('show-animate');
         }
         // if want to animation that repeats on scroll use this
-        else {
-            sec.classList.remove('show-animate');
-        }
+        // else {
+        //     sec.classList.remove('show-animate');
+        // }
     });
 
     // sticky navbar
@@ -46,4 +46,33 @@ window.onscroll = () => {
     let footer = document.querySelector('footer');
 
     footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
+}
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
 }
