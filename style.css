@@ -12,9 +12,9 @@
 }
 
 :root {
-    --bg-color: #e7a0a0;
-    --second-bg-color: #e7a0a0;
-    --text-color: #ededed;
+    --bg-color: #ffffff;
+    --second-bg-color: #ffffff;
+    --text-color: #ffb8b8;
     --main-color: #a14e00;
 
     --color-primary: #ffffff;
@@ -114,6 +114,34 @@ section {
     background-position: center;
 }
 
+.img1 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 515px;
+    height: 850px;
+    padding: 10px;
+}
+
+.img3 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 532px;
+    height: 850px;
+    padding: 10px;
+}
+
+.img2 {
+    position:absolute;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width:560px;
+    height: 850px;
+    padding: 10px;
+}
+
 .home-content {
     max-width: 60rem;
     z-index: 99;
@@ -123,6 +151,7 @@ section {
     position: relative;
     display: inline-block;
 }
+
 
 .home-content h1 span {
     color: var(--text-color);
