@@ -1,11 +1,23 @@
 // toggle icon navbar
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
+let playsound = document.querySelector('#playsound');
+let playsoundhand = document.querySelector('#handplaysound');
 
 menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 }
+
+playsound.onclick = () => {
+    if (playsound.className != "circle-spin") {
+        playsoundhand.id = "handplaysoundafter";
+        playsound.className = "circle-spin";
+        var audio = new Audio('music.mp3');
+        audio.play();
+    }
+}
+
 
 // scroll sections
 let sections = document.querySelectorAll('section');
@@ -14,7 +26,7 @@ let navLinks = document.querySelectorAll('header nav a');
 window.onscroll = () => {
     sections.forEach(sec => {
         let top = window.scrollY;
-        let offset = sec.offsetTop - 800;
+        let offset = sec.offsetTop - 600;
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
 
@@ -32,7 +44,7 @@ window.onscroll = () => {
         //     sec.classList.remove('show-animate');
         // }
     });
-    
+
     sections.forEach(sec => {
         let top = window.scrollY;
         let offset = sec.offsetTop - 200;
