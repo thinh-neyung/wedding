@@ -15,7 +15,7 @@
     --bg-color: #ffffff;
     --second-bg-color: #ffffff;
     --text-color: #e782a9;
-    --main-color: #a14e00;
+    --main-color: #fcb3ff;
 
     --color-primary: #ffffff;
     --color-secondary: #ff7563;
@@ -36,7 +36,7 @@ body {
 
 @font-face {
     font-family: font1;
-    src: url('./font/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+    src: url('./font/StyleScript-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -53,6 +53,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
+    height: 10%;
     padding: 2rem 9%;
     background: transparent;
     display: flex;
@@ -68,7 +69,7 @@ body {
 
 .logo {
     position: relative;
-    font-size: 5rem;
+    font-size: 6rem;
     color: var(--text-color);
     font-family: 'font1';
     font-weight: 500;
@@ -80,7 +81,7 @@ body {
 
 .navbar a {
     font-family: 'font1';
-    font-size: 2rem;
+    font-size: 3rem;
     color: var(--text-color);
     font-weight: 500;
     margin-left: 3.5rem;
@@ -101,7 +102,7 @@ body {
 }
 
 section {
-    min-height: 100vh;
+    min-height: 140vh;
     padding: 10rem 9% 2rem;
 }
 
@@ -116,10 +117,10 @@ section {
 
 .img1 {
     position: absolute;
-    top: 100px;
+    top: 80px;
     right: 0px;
-    width: 392px;
-    height: 843px;
+    width: 375px;
+    height: 806px;
     padding: 10px;
     opacity: 0;
     animation: fadeInFromNone 2s forwards;
@@ -128,10 +129,10 @@ section {
 
 .img3 {
     position: absolute;
-    top: 100px;
+    top: 80px;
     left: 0px;
-    width: 392px;
-    height: 843px;
+    width: 375px;
+    height: 806px;
     padding: 10px;
     opacity: 0;
     animation: fadeInFromNone 2s forwards;
@@ -140,11 +141,11 @@ section {
 
 .img2 {
     position: absolute;
-    top: 100px;
+    top: 80px;
     left: 50%;
     transform: translate(-50%, 0);
-    width: 413px;
-    height: 843px;
+    width: 375px;
+    height: 765px;
     padding: 10px;
     opacity: 0;
     animation: fadeInFromNone 2s forwards;
@@ -152,12 +153,12 @@ section {
 }
 
 .img4 {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width:  500px;
-    height:337px;
-    padding: 10px;
+    position: relative;
+    justify-content: center;
+    margin-top: 50px;
+    /* transform: translate(-50%, 0); */
+    width:  330px;
+    height:221px;
     opacity: 0;
     animation: fadeInFromNone 2s forwards;
     animation-delay: 1s;
@@ -361,9 +362,12 @@ section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 4rem;
     background: var(--second-bg-color);
     padding-bottom: 6rem;
+
+    min-height: auto;
+    gap: 4rem;
+    
 }
 
 .heading {
@@ -385,6 +389,10 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.slideimg {
+    border-radius: 3%;
+    /* border: 3px solid #000000; */
 }
 
 .about-img img {
@@ -468,13 +476,15 @@ span {
     align-items: center;
     flex-direction: column;
     min-height: auto;
-    padding-bottom: 5rem;
+    gap: 4rem;
+    padding-bottom: 6rem;
+
 }
 
 .education .education-row {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
-    gap: 5rem;
+    gap: 5rem; */
 }
 
 .education-row .education-column {
@@ -681,13 +691,13 @@ span {
 }
 
 .contact {
-    height: 1300px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     min-height: auto;
     padding-bottom: 5rem;
+    
 }
 
 
@@ -848,7 +858,7 @@ section:nth-child(odd) .animate.scroll,
 }
 
 .education .education-box .animate.scroll {
-    width: 105%;
+    /* width: 105%; */
 }
 
 .about.show-animate .animate.scroll,
@@ -1394,9 +1404,8 @@ section:nth-child(odd) .animate.scroll,
 
 .masked-text {
     font-family: 'font1';
-    /* padding-top: 10px; */
     margin-bottom: 3rem;
-    font-size: 6rem;
+    font-size: 8rem;
     font-weight: 800;
     color: transparent;
     background-image: url('images/bgtext.jpg');
