@@ -14,14 +14,11 @@
 :root {
     --bg-color: #fff8ec;
     --second-bg-color: #fff8ec;
-    --text-color: #f89cbf;
-    --main-color: #f89cbf;
+    /* --text-color: #f89cbf;
+    --main-color: #f89cbf; */
 
-    --color-primary: #ffffff;
-    --color-secondary: #ff7563;
-    --color-tertiary: #ff6753;
-    --color-quaternary: #ff604b;
-    --color-quinary: #ff5943;
+    --text-color: #7c6f1a;
+    --main-color: #7c6f1a;
 }
 
 html {
@@ -1453,7 +1450,6 @@ section:nth-child(odd) .animate.scroll,
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: animate-background 10s infinite alternate linear;
-
     z-index: 1; 
 }
 
