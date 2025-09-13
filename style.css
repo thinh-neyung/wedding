@@ -12,10 +12,10 @@
 }
 
 :root {
-    --bg-color: #ffffff;
-    --second-bg-color: #ffffff;
-    --text-color: #e782a9;
-    --main-color: #fcb3ff;
+    --bg-color: #fff8ec;
+    --second-bg-color: #fff8ec;
+    --text-color: #f89cbf;
+    --main-color: #f89cbf;
 
     --color-primary: #ffffff;
     --color-secondary: #ff7563;
@@ -53,7 +53,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 10%;
+    height: 11%;
     padding: 2rem 9%;
     background: transparent;
     display: flex;
@@ -61,6 +61,8 @@ body {
     align-items: center;
     z-index: 100;
     transition: .3s;
+    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .header {
@@ -102,22 +104,18 @@ body {
 }
 
 section {
-    min-height: 140vh;
+    min-height: 100vh;
     padding: 10rem 9% 2rem;
 }
 
 .home {
     display: flex;
     align-items: center;
-    padding: 0 9%;
-    background: url('/images/home.jpg') no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 
 .img1 {
     position: absolute;
-    top: 80px;
+    top: 73px;
     right: 0px;
     width: 375px;
     height: 806px;
@@ -129,7 +127,7 @@ section {
 
 .img3 {
     position: absolute;
-    top: 80px;
+    top: 73px;
     left: 0px;
     width: 375px;
     height: 806px;
@@ -141,11 +139,34 @@ section {
 
 .img2 {
     position: absolute;
-    top: 80px;
+    top: 73px;
     left: 50%;
     transform: translate(-50%, 0);
     width: 375px;
     height: 765px;
+    padding: 10px;
+    opacity: 0;
+    animation: fadeInFromNone 2s forwards;
+    animation-delay: 1s;
+}
+
+.img5 {
+    position: absolute;
+    width: 375px;
+    height: 429px;
+    
+    opacity: 0;
+    animation: fadeInFromNone 2s forwards;
+    animation-delay: 1s;
+    z-index: 0;
+}
+
+.img6 {
+    position: absolute;
+    margin-bottom: 0%;
+    margin-right: 0%;
+    width: 375px;
+    height: 603px;
     padding: 10px;
     opacity: 0;
     animation: fadeInFromNone 2s forwards;
@@ -157,8 +178,8 @@ section {
     justify-content: center;
     margin-top: 50px;
     /* transform: translate(-50%, 0); */
-    width:  330px;
-    height:221px;
+    width: 330px;
+    height: 221px;
     opacity: 0;
     animation: fadeInFromNone 2s forwards;
     animation-delay: 1s;
@@ -175,7 +196,8 @@ section {
 }
 
 .home-content {
-    max-width: 60rem;
+    height: 300px;
+    width: 60rem;
     z-index: 99;
 }
 
@@ -367,7 +389,7 @@ section {
 
     min-height: auto;
     gap: 4rem;
-    
+
 }
 
 .heading {
@@ -390,6 +412,7 @@ span {
     justify-content: center;
     align-items: center;
 }
+
 .slideimg {
     border-radius: 3%;
     /* border: 3px solid #000000; */
@@ -476,15 +499,16 @@ span {
     align-items: center;
     flex-direction: column;
     min-height: auto;
+    margin-left: 0px;
     gap: 4rem;
     padding-bottom: 6rem;
 
 }
 
 .education .education-row {
-    /* display: flex;
+    display: flex;
     flex-wrap: wrap;
-    gap: 5rem; */
+    gap: 5rem;
 }
 
 .education-row .education-column {
@@ -532,8 +556,8 @@ span {
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
-    width: 0;
+    left: 20px;
+    width: 20px;
     height: 100%;
     background: var(--second-bg-color);
     z-index: -1;
@@ -568,7 +592,7 @@ span {
     padding-bottom: 5rem;
     padding-bottom: 7rem;
     background: var(--second-bg-color); */
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -697,7 +721,7 @@ span {
     flex-direction: column;
     min-height: auto;
     padding-bottom: 5rem;
-    
+
 }
 
 
@@ -857,8 +881,8 @@ section:nth-child(odd) .animate.scroll,
     background: var(--second-bg-color);
 }
 
-.education .education-box .animate.scroll {
-    /* width: 105%; */
+.education .education-column .animate.scroll {
+    width: 105%;
 }
 
 .about.show-animate .animate.scroll,
@@ -895,6 +919,7 @@ section:nth-child(odd) .animate.scroll,
     }
 
     section {
+        min-height: 105vh;
         padding: 10rem 4% 2rem;
     }
 
@@ -909,14 +934,26 @@ section:nth-child(odd) .animate.scroll,
     }
 }
 
-@media (max-width: 768px) {
-    .header {
+@media (max-width: 768px) and (max-height: 850px) {
+    section {
+        min-height: 135vh;
+    }
+}
+@media (max-width: 768px) and (min-height: 900px) {
+    section {
+        min-height: 100vh;
+    }
+}
+
+@media (max-width: 768px)  {
+    a .header {
         background: var(--bg-color);
     }
 
     #menu-icon {
         display: block;
     }
+
 
     .navbar {
         position: absolute;
@@ -1416,6 +1453,8 @@ section:nth-child(odd) .animate.scroll,
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: animate-background 10s infinite alternate linear;
+
+    z-index: 1; 
 }
 
 @keyframes animate-background {
