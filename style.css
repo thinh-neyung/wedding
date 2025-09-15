@@ -105,10 +105,10 @@ section {
     min-height:135vh;
     padding: 10rem 9% 2rem;
 }
-
 .home {
     display: flex;
     align-items: center;
+    min-height: auto;
 }
 
 .img1 {
@@ -194,7 +194,7 @@ section {
 }
 
 .home-content {
-    height: 300px;
+    height: 750px;
     width: 60rem;
     z-index: 99;
 }
@@ -555,7 +555,7 @@ span {
     position: absolute;
     top: 0;
     left: 20px;
-    width: 20px;
+    width: 30px;
     height: 100%;
     background: var(--second-bg-color);
     z-index: -1;
@@ -880,7 +880,10 @@ section:nth-child(odd) .animate.scroll,
 }
 
 .education .education-column .animate.scroll {
-    width: 105%;
+    width: 110%;
+    height: 110%;
+    margin-top: -2px;
+    margin-right: -2px;
 }
 
 .about.show-animate .animate.scroll,
@@ -1444,7 +1447,7 @@ section:nth-child(odd) .animate.scroll,
     font-size: 8rem;
     font-weight: 800;
     color: transparent;
-    background-image: url('images/bgtext.jpg');
+    background-image: url('images/bgtext1.jpg');
     background-size: 150%;
     /* Enlarged for smooth animation */
     background-position: 0 60%;
