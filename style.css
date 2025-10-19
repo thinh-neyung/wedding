@@ -19,6 +19,9 @@
 
     --text-color: #7c6f1a;
     --main-color: #7c6f1a;
+    /* --text-color: #09285d;
+    --main-color: #09285d; */
+
 }
 
 html {
@@ -141,7 +144,7 @@ section {
     left: 50%;
     transform: translate(-50%, 0);
     width: 375px;
-    height: 617px;
+    height: 533px;
     padding: 10px;
     opacity: 0;
     animation: fadeInFromNone 2s forwards;
@@ -194,7 +197,7 @@ section {
 }
 
 .home-content {
-    height: 750px;
+    height: 630px;
     width: 60rem;
     z-index: 99;
 }
@@ -516,7 +519,7 @@ span {
 .education-column .title {
     position: relative;
     display: inline-block;
-    font-size: 2.5rem;
+    font-size: 4rem;
     margin: 0 0 1.5rem 2rem;
 }
 
@@ -567,7 +570,7 @@ span {
 }
 
 .education-content .content .year {
-    font-size: 1.5rem;
+    font-size: 3rem;
     color: var(--main-color);
     padding-bottom: .5rem;
 }
@@ -581,7 +584,7 @@ span {
 }
 
 .education-content .content p {
-    font-size: 1.6rem;
+    font-size: 3rem;
     padding-top: .5rem;
 }
 
@@ -1153,7 +1156,7 @@ section:nth-child(odd) .animate.scroll,
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgb(0, 0, 0);
 }
 
 /* Caption text */
@@ -1466,4 +1469,36 @@ section:nth-child(odd) .animate.scroll,
     100% {
         background-position: 100% 50%;
     }
+}
+
+
+
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body { font-family: sans-serif; }
+
+.gallery {
+  background: #EEE;
+}
+
+.gallery-cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8C8;
+  counter-increment: gallery-cell;
+}
+
+/* cell number */
+.gallery-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
 }
