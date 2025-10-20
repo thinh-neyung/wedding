@@ -1187,7 +1187,7 @@ section:nth-child(odd) .animate.scroll,
 /* On hover, add a black background color with a little bit see-through */
 .prev:active ,
 .next:active {
-    background-color:#fff8ec00;
+    background-color:#ffa20000;
 }
 
 /* Caption text */
