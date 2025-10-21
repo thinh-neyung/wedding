@@ -14,6 +14,7 @@ playsound.onclick = () => {
         playsoundhand.id = "handplaysoundafter";
         playsound.className = "circle-spin";
         var audio = new Audio('music.mp3');
+        audio.loop=true;
         audio.play();
     }
 }
