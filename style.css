@@ -417,8 +417,8 @@ span {
 
 .about-img2 {
     position: relative;
-    width: 35rem;
-    height: 25rem;
+    width: 110%;
+    height: 28rem;
     border-radius: 50%;
     display: flex;
     justify-content: center;
